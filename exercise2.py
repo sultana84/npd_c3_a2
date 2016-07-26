@@ -1,12 +1,8 @@
 def hello_universe(f):
     def decorated(*args, **kwargs):
         print('Hello Universe!')
+        return f(*args, **kwargs)
     return decorated
-
-def __call__(self, *args, **kwargs):
-    print ('Hello Universe %s!' % self.f.f_name)
-    _ret = self.f(*args, **kwargs)
-    return _ret
 
 @hello_universe
 def multiply(arg1, arg2):
